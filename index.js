@@ -3,7 +3,7 @@ const client = new Client();
 
 const iotaLibrary = require('@iota/core')
 const iota = iotaLibrary.composeAPI({
-    provider: 'https://nodes.devnet.thetangle.org:443'
+    provider: 'https://nutzdoch.einfachiota.de'
 })
 const converter = require("@iota/converter");
 
@@ -54,7 +54,6 @@ sock.on('message', msg => {
     data[0] // Use index 0 to match topic
     ) {
         case address:
-
             iota.getTransactionObjects([data[1]])
                 .then(transactions => {
                     client.channels.get(channelID_general).send('Thanks! Donation has been received. :heart:');
