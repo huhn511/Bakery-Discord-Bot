@@ -3,7 +3,7 @@ const client = new Client();
 
 const iotaLibrary = require('@iota/core')
 const iota = iotaLibrary.composeAPI({
-    provider: 'https://nutzdoch.einfachiota.de'
+    provider: 'https://nodes.tanglebay.org'
 })
 const converter = require("@iota/converter");
 
